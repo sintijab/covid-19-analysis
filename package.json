@@ -1,0 +1,14 @@
+{
+  "name": "covid_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.23.0",
+    "graphql": "^15.5.0",
+    "lodash.snakecase": "^4.1.1"
+  }
+}
