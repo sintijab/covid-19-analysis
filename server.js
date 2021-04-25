@@ -3,26 +3,29 @@ const { ApolloServer } = require('apollo-server-express');
 const { typeDefs, resolvers } = require('./schema');
 const path = require('path');
 
-async function startApolloServer() {
-  const app = express();
-  const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-  });
-  await server.start();
+const app = express();
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  next()
+})
 
-  server.applyMiddleware({ app });
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
+server.start();
 
-  app.use(express.static(__dirname + '/build'))
+server.applyMiddleware({ app });
 
-  app.get('/', function(req, res) {
-      res.sendFile(path.join(__dirname + '/index.html'));
-  });
-  const serverPort = process.env.PORT || 4000
-  const serverHost = '0.0.0.0'
-  app.listen(serverPort, serverHost, () => {
-    console.log('Listening on port %d', serverPort)
-  })
-}
+app.use(express.static(__dirname + '/build'));
 
-startApolloServer();
+const serverPort = process.env.PORT || 4000;
+const serverHost = '0.0.0.0'
+
+app.get('*', ((req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'))
+}));
+
+app.listen(serverPort, serverHost, () => {
+  console.log('Listening on port %d', serverPort)
+});
