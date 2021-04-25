@@ -1,0 +1,24 @@
+.card {
+  border-radius: .3rem;
+  overflow: hidden;
+  margin: 0 .2rem 0 0;
+  width: 300px;
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: .5rem 0;
+  border-radius: .3rem;
+  background-color: rgb(19, 19, 19);;
+  a {
+    overflow: hidden;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0 0 1rem;
+  }
+}

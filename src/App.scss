@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+}
+
+body {
+ background-color: #180116;
+}
+
+.h1 {
+  font-family: 'Playfair Display', serif;
+  color: rgb(19, 19, 19);
+  margin: 0 0 1rem 0;
+}
+
+
+.h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(19, 19, 19);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
+}
+
+.h5 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(61, 61, 61);
+  line-height: 1.5;
+  padding: .5rem 0 0;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+.header {
+  padding: 1rem;
+  background-color: #dddddd;
+  @media screen and (min-width: 1200px) {
+    padding: 1rem 5rem;
+  }
+}
+
+.link {
+  text-decoration: none;
+}
