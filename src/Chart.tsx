@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import { getVerticalChartConfig } from './utils';
 import styles from './Chart.scss';
-
 Chart.defaults.color = '#FFFFFF';
 
 interface Day {

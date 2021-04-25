@@ -1,6 +1,6 @@
 export const SUB_HEADER = 'Statistics and Research';
 export const HEADER = 'Coronavirus Pandemic (COVID-19)';
-export const AUTHOR = 'Author: .';
+export const AUTHOR = 'Author: ';
 export const AUTHOR_NAME = 'Sintija Birgele.';
 export const AUTHOR_LINK = 'https://de.linkedin.com/in/sintija-birgele';
 export const CITATION = ' Datasets retrieved from ';

@@ -5,6 +5,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const styleLoader = !isProd ? 'style-loader' : MiniCssExtractPlugin.loader;
+const CopyPlugin = require('copy-webpack-plugin');
 
 const config = {
   mode: isProd ? 'production' : 'development',
@@ -60,6 +61,9 @@ const config = {
       filename:"[name].css",
       chunkFilename:"[id].css"
   }),
+    new CopyPlugin([
+      { from: 'src/static' },
+    ]),
   ],
 };
 
