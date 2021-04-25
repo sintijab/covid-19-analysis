@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import { countriesOptions } from './countries';
+import { countriesOptions } from './Countries';
 import styles from './Select.scss';
 
 interface Option {
